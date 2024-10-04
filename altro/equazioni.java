@@ -1,3 +1,4 @@
+package altro;
 import java.util.Scanner;
 
 public class equazioni {

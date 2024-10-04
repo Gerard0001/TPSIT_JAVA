@@ -1,3 +1,4 @@
+package ES02;
 public class EquazioSec {
     public static void main(String[] args) {
         // Controllo se sono stati forniti esattamente tre argomenti

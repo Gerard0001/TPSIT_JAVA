@@ -1,3 +1,4 @@
+package altro;
 
 public class operazioni {
     public static void main(String[] args) {
