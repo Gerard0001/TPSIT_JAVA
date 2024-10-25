@@ -27,9 +27,6 @@ public class Stringhe {
             System.out.println("Stringa con l'iniziale maiuscola: " + capitalized);
         }
 
-        long numOccurrences = input.chars().filter(ch -> ch == 'a').count();
-        System.out.println("Numero di occorrenze del carattere 'a': " + numOccurrences);
-
         if (length >= 4) {
 
             String substring = input.substring(0, 4);
