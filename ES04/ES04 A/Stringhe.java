@@ -3,59 +3,38 @@ import java.util.Scanner;
 public class Stringhe {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Inserisci una stringa: ");
-        String input = scanner.nextLine();
-
-        int length = input.length();
-        System.out.println("La lunghezza della stringa è: " + length);
         
-        if (length > 0) {
+        System.out.print("Inserisci una stringa: ");
+        String frase = scanner.nextLine();
 
-            int centerIndex = length / 2;
-
-            if (length % 2 == 0) {
-
-                System.out.println("I caratteri centrali sono: '" + input.charAt(centerIndex - 1) + "' e '" + input.charAt(centerIndex) + "'");
-            } else {
-                System.out.println("Il carattere centrale è: '" + input.charAt(centerIndex) + "'");
+        int lunghezza = frase.length();
+        
+        char carattereCentrale = frase.charAt(lunghezza / 2); 
+        
+        // Converte la prima lettera della frase in maiuscolo
+        String fraseConInizialeMaiuscola = frase.substring(0, 1).toUpperCase() + frase.substring(1);
+        
+        // Conta le occorrenze del carattere 'a'
+        int contatoreA = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == 'a' || frase.charAt(i) == 'A') {
+                contatoreA++;
             }
         }
 
-        if (length > 0) {
-            String capitalized = Character.toUpperCase(input.charAt(0)) + input.substring(1);
-            System.out.println("Stringa con l'iniziale maiuscola: " + capitalized);
-        }
-
-        if (length >= 4) {
-
-            String substring = input.substring(0, 4);
-            System.out.println("Sottostringa dal primo al quarto carattere: " + substring);
-        } 
-        else {
-            System.out.println("La stringa è troppo corta per estrarre una sottostringa da 1 a 4.");
-        }
-
-        System.out.println("Stringa in maiuscolo: " + input.toUpperCase());
-
-        System.out.println("Stringa in minuscolo: " + input.toLowerCase());
-
-
-        if (isPalindrome(input)) {
-
-            System.out.println("La stringa è un palindromo.");
-        } 
-        else {
-            System.out.println("La stringa NON è un palindromo.");
-        }
-
+        String sottostringa = frase.substring(0, 4);
+        String fraseMaiuscola = frase.toUpperCase();
+        String fraseMinuscola = frase.toLowerCase();
+        
+        // Stampa i risultati
+        System.out.println("Lunghezza della stringa: " + lunghezza);
+        System.out.println("Carattere in posizione centrale: " + carattereCentrale);
+        System.out.println("Frase con iniziale maiuscola: " + fraseConInizialeMaiuscola);
+        System.out.println("Numero di occorrenze del carattere 'a': " + contatoreA);
+        System.out.println("La sottostringa dal primo al quarto carattere: " + sottostringa);
+        System.out.println("La stringa in maiuscolo: " + fraseMaiuscola);
+        System.out.println("La stringa in minuscolo: " + fraseMinuscola);
+        
         scanner.close();
-    }
-
-    public static boolean isPalindrome(String str) {
-
-        String cleaned = str.replaceAll("\\s+", "").toLowerCase(); // Rimuoviamo gli spazi e facciamo tutto minuscolo
-        String reversed = new StringBuilder(cleaned).reverse().toString();
-        return cleaned.equals(reversed);
     }
 }
