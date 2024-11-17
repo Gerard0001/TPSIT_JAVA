@@ -19,6 +19,8 @@ public class EsArr4 {
                 System.out.print(" ");
             }
         }
+
+        System.out.print(" \n");
     }
 }
 

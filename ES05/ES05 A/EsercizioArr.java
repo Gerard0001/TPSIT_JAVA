@@ -10,5 +10,7 @@ public class EsercizioArr {
                 System.out.print(" ");
             }
         }
+
+        System.out.print("\n ");
     }
 }

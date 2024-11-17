@@ -17,5 +17,7 @@ public class EsArr5 {
                 System.out.print(" ");
             }
         }
+        System.out.print(" \n");
+
     }
 }

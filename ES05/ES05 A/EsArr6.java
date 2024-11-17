@@ -26,5 +26,6 @@ public class EsArr6 {
                 System.out.print(" ");
             }
         }
+        System.out.print(" \n");
     }
 }
