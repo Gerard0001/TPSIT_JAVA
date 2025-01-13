@@ -35,6 +35,7 @@ public class Main {
                 vet1[i] += valore;
             }
             System.out.println("Array dopo somma:");
+            
         } else if (operazione.length() == 2 && operazione.charAt(0) == '-' && operazione.charAt(1) == 'm') {
             for (int i = 0; i < vet1.length; i++) {
                 vet1[i] *= valore;
